@@ -18,6 +18,7 @@ public class TitleManager : MonoBehaviour
         {
             BusStop.IsGameStart = true;
             Road.IsGameStart = true;
+            BusWheel.IsGameStart = true;
         }
     }
 }
