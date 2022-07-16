@@ -6,8 +6,7 @@ public class BusStop : MonoBehaviour
 {
     public static bool IsGameStart;
     public float speed;
-    RigidBody rigidbody;
-
+    Rigidbody rigidbody;
 
     void Start()
     {
