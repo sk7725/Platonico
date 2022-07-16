@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleManager : MonoBehaviour
 {
     public bool IsGameStart;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,10 @@ public class TitleManager : MonoBehaviour
             Road.IsGameStart = true;
             BusWheel.IsGameStart = true;
         }
+    }
+
+    public void ChangeGameState()
+    {
+        IsGameStart = true;
     }
 }

@@ -169,7 +169,7 @@ GameObject:
   m_Component:
   - component: {fileID: 183743457}
   - component: {fileID: 183743458}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -549,7 +549,7 @@ GameObject:
   m_Component:
   - component: {fileID: 627844618}
   - component: {fileID: 627844619}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -724,12 +724,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1211714243 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 547039191857340732, guid: 5278ce44095352d428047c7f95d88198,
-    type: 3}
-  m_PrefabInstance: {fileID: 6479330360561145932}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230532083
 GameObject:
   m_ObjectHideFlags: 0
@@ -809,7 +803,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230532083}
-  m_LocalRotation: {x: -0.0072117597, y: 0.5982557, z: 0.0053846496, w: 0.80125475}
+  m_LocalRotation: {x: -0.008268824, y: -0.5825601, z: -0.005927088, w: 0.812724}
   m_LocalPosition: {x: -8.13, y: 0.78, z: -3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -840,8 +834,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -897,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1324862432}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Barrier
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -995,7 +989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1990706535}
   - component: {fileID: 1990706536}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1040,7 +1034,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2049587283}
   - component: {fileID: 2049587284}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1144,25 +1138,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
         type: 3}
-      propertyPath: cBullet
-      value: 
-      objectReference: {fileID: 2480647705321243361, guid: d11e329df48e20a418e378e1dfce18ee,
-        type: 3}
-    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
-        type: 3}
-      propertyPath: bulletHelper
-      value: 
-      objectReference: {fileID: 1211714243}
-    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
-        type: 3}
       propertyPath: centerWaypoint
       value: 
       objectReference: {fileID: 724436876}
-    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
-        type: 3}
-      propertyPath: waypoints.Array.size
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
         type: 3}
       propertyPath: waypoints.Array.data[0]
@@ -1215,7 +1193,7 @@ PrefabInstance:
     - target: {fileID: 7807420228181367455, guid: 81c4c5e2dfc04404690a507546d82527,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.41916513
+      value: -15.6
       objectReference: {fileID: 0}
     - target: {fileID: 7807420228181367455, guid: 81c4c5e2dfc04404690a507546d82527,
         type: 3}

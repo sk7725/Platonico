@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BossControl : MonoBehaviour {
     public const float MAX_HP = 100f;
-    public const int ATTACKS = 2;
+    public const int ATTACKS = 3;
     public static float health = 100f;
 
     public int attack = 0;
@@ -12,7 +12,8 @@ public class BossControl : MonoBehaviour {
     public GameObject[] waypoints;
     public GameObject centerWaypoint, bulletHelper;
 
-    public GameObject cBullet;
+    public GameObject cBullet, laser;
+    private GameObject currentLaser;
 
     public PlayerControl pcon;
 
@@ -26,13 +27,16 @@ public class BossControl : MonoBehaviour {
             attack = Random.Range(0, ATTACKS);
             attacking = true;
             switch (attack) {
-                case 0:
+                case 2:
                     MoveToRandom(4f);
                     StartCoroutine(BulletRingRain(cBullet, 4f, 0.5f, 20));
                     break;
                 case 1:
                     MoveToRandom(3f);
                     StartCoroutine(BulletRain(cBullet, 3f, 0.1f));
+                    break;
+                case 0:
+                    StartCoroutine(LaserFollowPlayer(6f));
                     break;
                 default:
                     attacking = false;
@@ -57,7 +61,7 @@ public class BossControl : MonoBehaviour {
     void MoveToRandom(float duration) {
         int id = Random.Range(0, waypoints.Length);
         Vector3 way = waypoints[id].transform.position;
-        if(Vector3.Distance(way, pcon.transform.position) < 8f) {
+        if (Vector3.Distance(way, pcon.transform.position) < 8f) {
             way = waypoints[(id + 1) % waypoints.Length].transform.position;
         }
 
@@ -83,6 +87,7 @@ public class BossControl : MonoBehaviour {
             time += interval;
             Bullet(bullet);
         }
+        yield return new WaitForSeconds(Random.Range(1f, 2f));
         attacking = false;
     }
 
@@ -95,13 +100,14 @@ public class BossControl : MonoBehaviour {
             bulletHelper.transform.rotation *= Quaternion.Euler(0, Random.Range(0f, 360f), 0);
             RingShot(bullet, n);
         }
+        yield return new WaitForSeconds(Random.Range(1f, 2f));
         attacking = false;
     }
 
     void RingShot(GameObject bullet, int n) {
         for (int i = 0; i < n; i++) {
             //Vector3 qe = transform.rotation.eulerAngles;
-            bulletHelper.transform.rotation *= Quaternion.Euler(0, 360f/n, 0);
+            bulletHelper.transform.rotation *= Quaternion.Euler(0, 360f / n, 0);
             Instantiate(bullet, transform.position, bulletHelper.transform.rotation);
         }
     }
@@ -111,5 +117,54 @@ public class BossControl : MonoBehaviour {
         Quaternion dir = Quaternion.LookRotation(p, Vector3.up);
         //if (shootFx != null) Instantiate(shootFx, p + pcon.transform.position, dir);
         Instantiate(bullet, p + transform.position, dir);
+    }
+
+    IEnumerator LaserFollowPlayer(float duration) {
+        StartCoroutine(MoveTo(centerWaypoint.transform.position, 1f));
+        yield return new WaitForSeconds(1.5f);
+        StartCoroutine(StartLaser(0.5f));
+        yield return new WaitForSeconds(0.5f);
+        //start laser
+        float time = 0f;
+        while (time < duration) {
+            time += Time.deltaTime;
+            bulletHelper.transform.forward = (pcon.transform.position - transform.position);
+            currentLaser.transform.rotation = Quaternion.Lerp(currentLaser.transform.rotation, bulletHelper.transform.rotation, Time.deltaTime * 1f);
+            yield return null;
+        }
+
+        StartCoroutine(EndLaser(0.5f));
+        yield return new WaitForSeconds(0.7f);
+        attacking = false;
+    }
+
+    IEnumerator StartLaser(float duration) {
+        currentLaser = Instantiate(laser);
+        currentLaser.transform.position = transform.position;
+        currentLaser.transform.forward = Vector3.down;
+        Transform core = currentLaser.transform.GetChild(0);
+        core.localScale = new Vector3(0, 1, 0);
+
+        float time = 0f;
+        while (time < duration) {
+            time += Time.deltaTime;
+            float f = time / duration;
+            core.localScale = new Vector3(f, 1, f);
+            yield return null;
+        }
+        core.localScale = Vector3.one;
+    }
+
+    IEnumerator EndLaser(float duration) {
+        Transform core = currentLaser.transform.GetChild(0);
+        float time = 0f;
+        while (time < duration) {
+            time += Time.deltaTime;
+            float f = time / duration;
+            core.localScale = new Vector3(1 - f, 1, 1 - f);
+            yield return null;
+        }
+        Destroy(currentLaser);
+        currentLaser = null;
     }
 }

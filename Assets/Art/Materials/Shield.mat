@@ -22,7 +22,7 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _ShieldPower: 2
+    - _ShieldPower: 0.5
     m_Colors:
     - _Color: {r: 0, g: 0.9804158, b: 1, a: 1}
     - _ShieldColor: {r: 0, g: 0.93673205, b: 1, a: 1}
