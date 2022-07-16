@@ -24,10 +24,15 @@ public class Road : MonoBehaviour
         rigidbody.velocity = new Vector3(speed, 0, 0);
 
         time += Time.deltaTime;
-        if(time > 5)
+        if(!IsGameStart && time > 5)
         {
             time = 0;
             transform.position = initPos;
+        }
+        else if (IsGameStart)
+        {
+            if(speed > 0)
+                speed -= Time.deltaTime;
         }
     }
 }

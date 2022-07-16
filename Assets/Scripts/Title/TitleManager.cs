@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TitleManager : MonoBehaviour
 {
+    public bool IsGameStart;
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +14,10 @@ public class TitleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsGameStart)
+        {
+            BusStop.IsGameStart = true;
+            Road.IsGameStart = true;
+        }
     }
 }
