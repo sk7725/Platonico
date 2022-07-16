@@ -5,6 +5,7 @@ using UnityEngine;
 public class TitleManager : MonoBehaviour
 {
     public bool IsGameStart;
+
     // Start is called before the first frame update
     void Start()
     {

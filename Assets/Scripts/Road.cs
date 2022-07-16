@@ -14,7 +14,7 @@ public class Road : MonoBehaviour
     public GameObject busStop;
     public SpawnPlayer spawnPlayer;
 
-    bool playerSpawned = false;
+    public static bool playerSpawned = false;
 
     // Start is called before the first frame update
     void Start()

@@ -235,6 +235,7 @@ MonoBehaviour:
   PlayerPrefab: {fileID: 7807420228181367448, guid: 81c4c5e2dfc04404690a507546d82527,
     type: 3}
   SpawnPoint: {fileID: 2044740675}
+  vcam01: {fileID: 958118482}
 --- !u!1 &582170124 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 7c596d0f36831834dbd2936a07eba415,
@@ -388,6 +389,10 @@ PrefabInstance:
     - {fileID: 1550015466715935619, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
     - {fileID: 6984016550274338429, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
     - {fileID: 5164574092991597426, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
+    - {fileID: 1666410499719862877, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
+    - {fileID: 4464713773627339904, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
+    - {fileID: 4098686274585171233, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
+    - {fileID: 2110573568189837236, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 63c6ecba01bbfcd429d13cdddfa191b7, type: 3}
 --- !u!1 &647699246 stripped
 GameObject:
@@ -521,7 +526,7 @@ MonoBehaviour:
     ModeOverride: 0
     LensShift: {x: 0, y: 0}
     GateFit: 2
-    m_SensorSize: {x: 2.187008, y: 1}
+    m_SensorSize: {x: 2.4468503, y: 1}
   m_Transitions:
     m_BlendHint: 0
     m_InheritPosition: 0
