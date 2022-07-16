@@ -153,11 +153,13 @@ public class PlayerControl : MonoBehaviour {
             if(Input.GetKeyDown(platonicCodes[i])) SetPlatonic(platonics[i]);
         }
 
-        for (int i = 0; i < skills.Length; i++) {
-            cooldowns[i] -= Time.deltaTime;
-            if (cooldowns[i] <= 0 && Input.GetKeyDown(skills[i].key)) {
-                skills[i].Use(this);
-                cooldowns[i] = skills[i].cooldown;
+        if (boss != null) {
+            for (int i = 0; i < skills.Length; i++) {
+                cooldowns[i] -= Time.deltaTime;
+                if (cooldowns[i] <= 0 && Input.GetKeyDown(skills[i].key)) {
+                    skills[i].Use(this);
+                    cooldowns[i] = skills[i].cooldown;
+                }
             }
         }
     }
@@ -204,7 +206,8 @@ public class PlayerControl : MonoBehaviour {
 
         health = MAX_HP;
         SetJumpHeight(3f);
-        boss = GameObject.FindWithTag("Boss").GetComponent<BossControl>();
+        GameObject b = GameObject.FindWithTag("Boss");
+        boss = b == null ? null : b.GetComponent<BossControl>();
     }
 
     public void SetJumpHeight(float h) {

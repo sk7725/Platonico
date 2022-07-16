@@ -228,3 +228,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 505a12eac5802d24dba81e8430b1e4ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  attack: 0
+  attacking: 0
+  waypoints:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  centerWaypoint: {fileID: 0}
+  bulletHelper: {fileID: 547039191857340732}
+  cBullet: {fileID: 2480647705321243361, guid: d11e329df48e20a418e378e1dfce18ee, type: 3}
+  laser: {fileID: 6631295816921553648, guid: e208c7960cc75a24a869f50cc64adbe0, type: 3}
+  pcon: {fileID: 0}
