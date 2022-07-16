@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 8445707377773408701}
   - component: {fileID: 5967789940522911095}
   - component: {fileID: 7723665242375959658}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: Dodecahedron
   m_TagString: Untagged
   m_Icon: {fileID: 0}

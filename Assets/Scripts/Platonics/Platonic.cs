@@ -12,6 +12,7 @@ public class Platonic : ScriptableObject {
     public MoveType moveType = MoveType.SLIDE;
     public GameObject prefab;
     public int jumps = 1;
+    public float speedMultiplier = 1f;
 
     public virtual void Shift() {
 

@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e14d0436f2d3134f887f1a65432fb28, type: 3}
   m_Name: Dodeca
   m_EditorClassIdentifier: 
-  moveType: 0
+  moveType: 1
   prefab: {fileID: 5319073476779910306, guid: 7790d313bee7ef043aa9ec03c48cd436, type: 3}
   jumps: 1
+  speedMultiplier: 2

@@ -3,18 +3,20 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    public const float SPEED = 0.3f, AIRSPEED = 0.07f, ROLLSPEED = 2f, MAX_HP = 100;
+    public const float SPEED = 0.3f, AIRSPEED = 0.07f, ROLLSPEED = 0.2f, MAX_HP = 100;
     private const float JUMP_GRACE = 0.3f;
     private const float JUMP_RELEASE_REDUCE = 0.75f;
     public static float JUMP_MAX = 0f;
     public Transform camt;
     public Platonic[] platonics;
     public KeyCode[] platonicCodes;
+    public Skill[] skills;
 
     public Platonic platonic;
-    public bool landed = false;
+    public bool landed = false, canJump;
     public Rigidbody rigid;
     public Collider col;
+    public BossControl boss;
 
     public enum State{
         NONE,
@@ -25,13 +27,18 @@ public class PlayerControl : MonoBehaviour {
     public State state = State.NONE;
     public State nextState = State.NONE;
     public float stateTime = 0f; //time after a state change
-    public float health = 0f;
+    public static float health = 0f;
     private bool jumpReleased = false;
     private float jumpPressTimer = JUMP_GRACE + 0.1f;
+    private float[] cooldowns;
 
     void Start() {
+        cooldowns = new float[skills.Length];
+        for(int i = 0; i < skills.Length; i++) {
+            cooldowns[i] = 0f;
+        }
         reset();
-        SetPlatonic(platonics[0]);
+        SetPlatonic(platonics[4]);
     }
 
     void Update() {
@@ -51,7 +58,7 @@ public class PlayerControl : MonoBehaviour {
         if (nextState == State.NONE) {
             switch (state) {
                 case State.IDLE:
-                    if(landed) {
+                    if(canJump) {
                         if (jumpPressTimer < JUMP_GRACE) {
                             //jump
                             jumpPressTimer = JUMP_GRACE + 0.1f;
@@ -108,33 +115,50 @@ public class PlayerControl : MonoBehaviour {
             platonic.ShiftUp();
         }
 
-        if(!landed || platonic.moveType == Platonic.MoveType.SLIDE || platonic.moveType == Platonic.MoveType.HOVER) {
+        //if(!landed || platonic.moveType == Platonic.MoveType.SLIDE || platonic.moveType == Platonic.MoveType.HOVER) {
             bool hover = platonic.moveType == Platonic.MoveType.HOVER;
             if (Input.GetKey(KeyCode.UpArrow)) {
-                vel += ForwardVector() * (landed ? SPEED : AIRSPEED);
+                vel += ForwardVector() * (landed ? SPEED : AIRSPEED) * platonic.speedMultiplier;
                 if(hover) rigid.AddTorque(new Vector3(0, 2.5f, 0));
             }
             if (Input.GetKey(KeyCode.DownArrow)) {
-                vel += ForwardVector() * (landed ? SPEED : AIRSPEED) * -1;
+                vel += ForwardVector() * (landed ? SPEED : AIRSPEED) * -1 * platonic.speedMultiplier;
                 if (hover) rigid.AddTorque(new Vector3(0, -2.5f, 0));
             }
             if (Input.GetKey(KeyCode.RightArrow)) {
-                vel += RightVector() * (landed ? SPEED : AIRSPEED);
+                vel += RightVector() * (landed ? SPEED : AIRSPEED) * platonic.speedMultiplier;
                 if (hover) rigid.AddTorque(new Vector3(0, 2.5f, 0));
             }
             if (Input.GetKey(KeyCode.LeftArrow)) {
-                vel += RightVector() * (landed ? SPEED : AIRSPEED) * -1;
+                vel += RightVector() * (landed ? SPEED : AIRSPEED) * -1 * platonic.speedMultiplier;
                 if (hover) rigid.AddTorque(new Vector3(0, -2.5f, 0));
             }
-        }
-        else {
+        //}
+        if(platonic.moveType == Platonic.MoveType.ROLL) {
             if (Input.GetKey(KeyCode.UpArrow)) {
-                vel += ForwardVector() * (landed ? SPEED : AIRSPEED);
+                rigid.AddTorque(RightVector() * ROLLSPEED, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.DownArrow)) {
+                rigid.AddTorque(RightVector() * ROLLSPEED * -1, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.RightArrow)) {
+                rigid.AddTorque(ForwardVector() * ROLLSPEED * -1, ForceMode.VelocityChange);
+            }
+            if (Input.GetKey(KeyCode.LeftArrow)) {
+                rigid.AddTorque(ForwardVector() * ROLLSPEED, ForceMode.VelocityChange);
             }
         }
 
         for (int i = 0; i < platonics.Length; i++) {
             if(Input.GetKeyDown(platonicCodes[i])) SetPlatonic(platonics[i]);
+        }
+
+        for (int i = 0; i < skills.Length; i++) {
+            cooldowns[i] -= Time.deltaTime;
+            if (cooldowns[i] <= 0 && Input.GetKeyDown(skills[i].key)) {
+                skills[i].Use(this);
+                cooldowns[i] = skills[i].cooldown;
+            }
         }
     }
 
@@ -162,22 +186,25 @@ public class PlayerControl : MonoBehaviour {
 
     private void CheckLanded() {
         landed = false;
-        if (!Physics.CheckSphere(new Vector3(col.bounds.center.x, col.bounds.center.y - 0.1f, col.bounds.center.z), 0.5f, 0b1011)) return;
+        if (!Physics.CheckSphere(new Vector3(col.bounds.center.x, col.bounds.center.y - 0.2f, col.bounds.center.z), 0.6f, 0b1011)) return;
 
         //there is a floor under me
         if (state == State.JUMP && stateTime < Time.deltaTime * 3f) {
             return; //don't check for ground right after a jump so the player *can* jump
         }
         landed = true;
+        canJump = true;
     }
 
     public void reset() {
         state = State.NONE;
         nextState = State.IDLE;
         jumpPressTimer = JUMP_GRACE + 0.1f;
+        canJump = true;
 
         health = MAX_HP;
         SetJumpHeight(3f);
+        boss = GameObject.FindWithTag("Boss").GetComponent<BossControl>();
     }
 
     public void SetJumpHeight(float h) {
