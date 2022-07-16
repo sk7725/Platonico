@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028334, g: 0.22571328, b: 0.3069217, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -250,17 +250,17 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: ba2ec3dc5eccfb140b6600554ee4d657,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 1000
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba2ec3dc5eccfb140b6600554ee4d657,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 1000
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba2ec3dc5eccfb140b6600554ee4d657,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 1000
+      value: 700
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: ba2ec3dc5eccfb140b6600554ee4d657,
         type: 3}
@@ -724,6 +724,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1211714243 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 547039191857340732, guid: 5278ce44095352d428047c7f95d88198,
+    type: 3}
+  m_PrefabInstance: {fileID: 6479330360561145932}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1230532083
 GameObject:
   m_ObjectHideFlags: 0
@@ -803,7 +809,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230532083}
-  m_LocalRotation: {x: -0.00721176, y: 0.59825563, z: 0.005384649, w: 0.8012548}
+  m_LocalRotation: {x: -0.0072117597, y: 0.5982557, z: 0.0053846496, w: 0.80125475}
   m_LocalPosition: {x: -8.13, y: 0.78, z: -3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1136,6 +1142,52 @@ PrefabInstance:
       propertyPath: m_Name
       value: BossSoccer
       objectReference: {fileID: 0}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: cBullet
+      value: 
+      objectReference: {fileID: 2480647705321243361, guid: d11e329df48e20a418e378e1dfce18ee,
+        type: 3}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: bulletHelper
+      value: 
+      objectReference: {fileID: 1211714243}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: centerWaypoint
+      value: 
+      objectReference: {fileID: 724436876}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 724436876}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 443491029}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 323594443}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 1685865027}
+    - target: {fileID: 5455225338045459955, guid: 5278ce44095352d428047c7f95d88198,
+        type: 3}
+      propertyPath: waypoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 1365406485}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5278ce44095352d428047c7f95d88198, type: 3}
 --- !u!1001 &7807420229094816217
