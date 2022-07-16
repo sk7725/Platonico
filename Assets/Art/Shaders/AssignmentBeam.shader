@@ -4,7 +4,7 @@ Shader "Platonics/AssignmentBeam"
     {
         _MainTex("Main Tex", 2D) = "white" {}
         _TintColor("Tint Color", color) = (1, 1, 1, 1)
-	    _Intensity("Intensity", Range(0, 1)) = 0.5
+	    _Intensity("Intensity", Range(0, 20)) = 0.5
         _Alpha("AlphaCut", Range(0,1)) = 0.5
     }  
 
@@ -22,8 +22,6 @@ Shader "Platonics/AssignmentBeam"
     	{  		
      	Name "Universal Forward"
         Tags { "LightMode" = "UniversalForward" }
-
-        Blend One One // Additive
 
        	HLSLPROGRAM
 
@@ -68,7 +66,7 @@ Shader "Platonics/AssignmentBeam"
 
         half4 frag(VertexOutput i) : SV_Target
         { 
-            float4 color = _MainTex.Sample(sampler_MainTex, i.uv); 
+            float4 color = _MainTex.Sample(sampler_MainTex, i.uv) * _Intensity; 
             clip(color.a - _Alpha);
             return color;  
         }
