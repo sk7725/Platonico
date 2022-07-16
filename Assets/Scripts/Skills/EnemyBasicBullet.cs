@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerBasicBullet : MonoBehaviour {
+public class EnemyBasicBullet : MonoBehaviour {
     public float speed = 3f, lifetime = 3f, damage = 3f;
     public GameObject hitFx;
     private float time = 0f;
@@ -21,9 +21,9 @@ public class PlayerBasicBullet : MonoBehaviour {
 
     private void OnCollisionEnter(Collision collision) {
         Debug.Log(collision);
-        if (collision.collider.CompareTag("Boss")) {
-            BossControl.health -= damage;
-            Debug.Log("B" + BossControl.health);
+        if (collision.collider.CompareTag("Player")) {
+            PlayerControl.health -= damage;
+            Debug.Log("P" + PlayerControl.health);
             Hit();
         }
         else if (collision.collider.CompareTag("Terrain")) {
@@ -32,7 +32,7 @@ public class PlayerBasicBullet : MonoBehaviour {
     }
 
     public void Hit() {
-        if(hitFx != null) {
+        if (hitFx != null) {
             Instantiate(hitFx, transform.position, transform.rotation);
         }
         Destroy(gameObject);
