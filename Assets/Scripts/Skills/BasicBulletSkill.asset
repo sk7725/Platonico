@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 122
   cooldown: 4
+  icon: {fileID: 2800000, guid: b3acdbb4da88de94e9df6727bca85ed6, type: 3}
   bullet: {fileID: 4757470164418179113, guid: c00e0aebd4fee2d488cbaf3710989b1e, type: 3}
   shootFx: {fileID: 2315629835069471037, guid: fd9760a09b5f6ee46993e39396f165d5, type: 3}
   shots: 4
