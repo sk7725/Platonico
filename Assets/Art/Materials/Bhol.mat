@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Shield
-  m_Shader: {fileID: 4800000, guid: 4fab8e988de93e549883d4c93722a576, type: 3}
+  m_Name: Bhol
+  m_Shader: {fileID: 4800000, guid: c76330edc4a837442ab9d990138b1ec6, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
@@ -22,8 +22,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _ShieldPower: 2
+    - _Alpha: 1
+    - _OtlWidth: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.9804158, b: 1, a: 1}
-    - _ShieldColor: {r: 0, g: 0.93673205, b: 1, a: 1}
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0, g: 0, b: 0, a: 1}
+    - _TopColor: {r: 0, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
