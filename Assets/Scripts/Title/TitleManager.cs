@@ -22,4 +22,9 @@ public class TitleManager : MonoBehaviour
             BusWheel.IsGameStart = true;
         }
     }
+
+    public void ChangeGameState()
+    {
+        IsGameStart = true;
+    }
 }
