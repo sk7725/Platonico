@@ -44,11 +44,11 @@ Rigidbody:
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0.4
-  m_AngularDrag: 0.2
+  m_AngularDrag: 1
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 112
+  m_Constraints: 0
   m_CollisionDetection: 1
 --- !u!114 &7807420228181367454
 MonoBehaviour:
@@ -71,14 +71,17 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ac9b26b61715383439eea8329d105e76, type: 2}
   - {fileID: 11400000, guid: ecfaaf2718bb77245998a5362bc48a00, type: 2}
   platonicCodes: 310000003200000033000000340000003500000036000000
+  skills:
+  - {fileID: 11400000, guid: c6405f6873c191b4785ab4bf01eb90ec, type: 2}
   platonic: {fileID: 0}
   landed: 0
+  canJump: 0
   rigid: {fileID: 7807420228181367451}
   col: {fileID: 0}
+  boss: {fileID: 0}
   state: 0
   nextState: 0
   stateTime: 0
-  health: 0
 --- !u!1001 &7807420229291202105
 PrefabInstance:
   m_ObjectHideFlags: 0

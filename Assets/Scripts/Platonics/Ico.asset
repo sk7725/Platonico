@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e14d0436f2d3134f887f1a65432fb28, type: 3}
   m_Name: Ico
   m_EditorClassIdentifier: 
-  moveType: 0
+  moveType: 1
   prefab: {fileID: 7028912524947604902, guid: 390172771cb7c8a4f9381e4e793cf108, type: 3}
   jumps: 1
+  speedMultiplier: 1.5
