@@ -1,0 +1,127 @@
+fileFormatVersion: 2
+guid: 2b3ab8c86ff8fdd409261ef891d8c6ad
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: group3
+    100002: //RootNode
+    100004: ludeng:Group31055
+    100006: ludeng:Group35094
+    100008: pCylinder2
+    100010: polySurface1
+    100012: transform2
+    100014: transform3
+    100016: transform4
+    100018: group
+    100020: joint1
+    100022: joint2
+    100024: joint3
+    400000: group3
+    400002: //RootNode
+    400004: ludeng:Group31055
+    400006: ludeng:Group35094
+    400008: pCylinder2
+    400010: polySurface1
+    400012: transform2
+    400014: transform3
+    400016: transform4
+    400018: group
+    400020: joint1
+    400022: joint2
+    400024: joint3
+    2300000: polySurface1
+    2300002: transform2
+    2300004: transform3
+    2300006: transform4
+    3300000: polySurface1
+    3300002: transform2
+    3300004: transform3
+    3300006: transform4
+    4300000: transform4
+    4300002: transform3
+    4300004: transform2
+    4300006: polySurface1
+    7400000: gutou
+    9500000: //RootNode
+    11100000: //RootNode
+    13700000: polySurface1
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: gutou
+      takeName: Take 001
+      firstFrame: 1
+      lastFrame: 22
+      wrapMode: 2
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0299999993
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 88
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 1
+  userData: 

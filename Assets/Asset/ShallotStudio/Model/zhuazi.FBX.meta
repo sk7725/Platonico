@@ -1,0 +1,147 @@
+fileFormatVersion: 2
+guid: 574101a17900b774b887f7f675466ed4
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: ______001
+    100004: ______002
+    100006: ______003
+    100008: ______004
+    100010: Bip01
+    100012: Bip01 ______
+    100014: Bip01 ______
+    100016: Bip01 L Calf
+    100018: Bip01 L Clavicle
+    100020: Bip01 L Finger0
+    100022: Bip01 L Finger1
+    100024: Bip01 L Foot
+    100026: Bip01 L Forearm
+    100028: Bip01 L Hand
+    100030: Bip01 L HorseLink
+    100032: Bip01 L Thigh
+    100034: Bip01 L UpperArm
+    100036: Bip01 Neck
+    100038: Bip01 R Calf
+    100040: Bip01 R Clavicle
+    100042: Bip01 R Finger0
+    100044: Bip01 R Finger1
+    100046: Bip01 R Foot
+    100048: Bip01 R Forearm
+    100050: Bip01 R Hand
+    100052: Bip01 R HorseLink
+    100054: Bip01 R Thigh
+    100056: Bip01 R UpperArm
+    100058: Bip01 Spine
+    100060: Bip01 Spine1
+    100062: Bone01
+    100064: Bone02
+    100066: Bone03
+    100068: Bone04
+    100070: Bone05
+    100072: Bone07
+    100074: diyulkingzhu01
+    100076: zhuazi
+    400000: //RootNode
+    400002: ______001
+    400004: ______002
+    400006: ______003
+    400008: ______004
+    400010: Bip01
+    400012: Bip01 ______
+    400014: Bip01 ______
+    400016: Bip01 L Calf
+    400018: Bip01 L Clavicle
+    400020: Bip01 L Finger0
+    400022: Bip01 L Finger1
+    400024: Bip01 L Foot
+    400026: Bip01 L Forearm
+    400028: Bip01 L Hand
+    400030: Bip01 L HorseLink
+    400032: Bip01 L Thigh
+    400034: Bip01 L UpperArm
+    400036: Bip01 Neck
+    400038: Bip01 R Calf
+    400040: Bip01 R Clavicle
+    400042: Bip01 R Finger0
+    400044: Bip01 R Finger1
+    400046: Bip01 R Foot
+    400048: Bip01 R Forearm
+    400050: Bip01 R Hand
+    400052: Bip01 R HorseLink
+    400054: Bip01 R Thigh
+    400056: Bip01 R UpperArm
+    400058: Bip01 Spine
+    400060: Bip01 Spine1
+    400062: Bone01
+    400064: Bone02
+    400066: Bone03
+    400068: Bone04
+    400070: Bone05
+    400072: Bone07
+    400074: diyulkingzhu01
+    400076: zhuazi
+    2300000: //RootNode
+    2300002: zhuazi
+    3300000: //RootNode
+    3300002: zhuazi
+    4300000: Plane001
+    4300002: Plane002
+    4300004: zhuazi
+    4300006: diyulkingzhu01
+    9500000: //RootNode
+    13700000: diyulkingzhu01
+  materials:
+    importMaterials: 0
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .0500000007
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 88
+    splitTangentsAcrossUV: 1
+    normalImportMode: 1
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 
