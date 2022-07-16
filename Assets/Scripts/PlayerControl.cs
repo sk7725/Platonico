@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    public const float SPEED = 0.5f, AIRSPEED = 0.2f, MAX_HP = 100;
+    public const float SPEED = 0.5f, AIRSPEED = 0.07f, MAX_HP = 100;
     private const float JUMP_GRACE = 0.3f;
     private const float JUMP_RELEASE_REDUCE = 0.75f;
     public static float JUMP_MAX = 0f;
     public Transform camt;
     public Platonic[] platonics;
+    public KeyCode[] platonicCodes;
 
     public Platonic platonic;
     public bool landed = false;
@@ -107,12 +108,15 @@ public class PlayerControl : MonoBehaviour {
             platonic.ShiftUp();
         }
 
-        if(platonic.moveType == Platonic.MoveType.SLIDE) {
+        if(platonic.moveType == Platonic.MoveType.SLIDE || platonic.moveType == Platonic.MoveType.HOVER) {
+            bool hover = platonic.moveType == Platonic.MoveType.HOVER;
             if (Input.GetKey(KeyCode.UpArrow)) {
                 vel += ForwardVector() * (landed ? SPEED : AIRSPEED);
+                if(hover) rigid.AddTorque(new Vector3(0, 3.5f, 0));
             }
             if (Input.GetKey(KeyCode.DownArrow)) {
                 vel += ForwardVector() * (landed ? SPEED : AIRSPEED) * -1;
+                if (hover) rigid.AddTorque(new Vector3(0, -3.5f, 0));
             }
             if (Input.GetKey(KeyCode.RightArrow)) {
                 vel += RightVector() * (landed ? SPEED : AIRSPEED);
@@ -120,6 +124,10 @@ public class PlayerControl : MonoBehaviour {
             if (Input.GetKey(KeyCode.LeftArrow)) {
                 vel += RightVector() * (landed ? SPEED : AIRSPEED) * -1;
             }
+        }
+
+        for (int i = 0; i < platonics.Length; i++) {
+            if(Input.GetKeyDown(platonicCodes[i])) SetPlatonic(platonics[i]);
         }
     }
 
@@ -162,7 +170,7 @@ public class PlayerControl : MonoBehaviour {
         jumpPressTimer = JUMP_GRACE + 0.1f;
 
         health = MAX_HP;
-        SetJumpHeight(2.5f);
+        SetJumpHeight(3f);
     }
 
     public void SetJumpHeight(float h) {

@@ -303,6 +303,12 @@ MonoBehaviour:
   camt: {fileID: 1230532086}
   platonics:
   - {fileID: 11400000, guid: 975039e87d181a64bb07bc9ca5eb6c5b, type: 2}
+  - {fileID: 11400000, guid: 1a73c60aa6ed9e54ba27caa1f9dea74c, type: 2}
+  - {fileID: 11400000, guid: f119f51dfde99114d83f3dc1b4286ff8, type: 2}
+  - {fileID: 11400000, guid: da4d7dc3ba2cd814eae7549aa8f4c70c, type: 2}
+  - {fileID: 11400000, guid: ac9b26b61715383439eea8329d105e76, type: 2}
+  - {fileID: 11400000, guid: ecfaaf2718bb77245998a5362bc48a00, type: 2}
+  platonicCodes: 310000003200000033000000340000003500000036000000
   platonic: {fileID: 0}
   landed: 0
   rigid: {fileID: 932586306}
@@ -419,6 +425,7 @@ GameObject:
   - component: {fileID: 1230532086}
   - component: {fileID: 1230532085}
   - component: {fileID: 1230532084}
+  - component: {fileID: 1230532087}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -492,6 +499,39 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1230532087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1230532083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_VolumeFrameworkUpdateModeOption: 2
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_AllowXRRendering: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!1001 &1954344928
 PrefabInstance:
   m_ObjectHideFlags: 0

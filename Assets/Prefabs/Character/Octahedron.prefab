@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 239945158850549969}
   - component: {fileID: 3817837852240353140}
   - component: {fileID: 1377916791287931838}
+  - component: {fileID: 1789475668137369609}
   m_Layer: 0
   m_Name: Octahedron
   m_TagString: Untagged
@@ -61,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f294132ba76edcf4186791e170ed59a2, type: 2}
+  - {fileID: 2100000, guid: fe36d261370a8e54f8cfd038a6f931ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -83,3 +84,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &1789475668137369609
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585367300550214251}
+  m_Material: {fileID: 13400000, guid: 07b4f6bec0f0a5c42a0586504dbd1404, type: 2}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 3635823603335089682, guid: 0bcec3e0c96dd464db4348a654585a66, type: 3}
