@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Mat_FX_1980791_01
+  m_Shader: {fileID: 4800000, guid: 9aa9943f7ae2c264f967724c30fa9b74, type: 3}
+  m_ValidKeywords: []
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _AnimTex:
+        m_Texture: {fileID: 2800000, guid: 5b1ffcf6623892c4d98edda58282bcbe, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Detail:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: cd2fc4b4763ab60408abc59b178fd241, type: 3}
+        m_Scale: {x: 0.125, y: 0.125}
+        m_Offset: {x: 0, y: 0.25}
+    m_Ints: []
+    m_Floats:
+    - _InvFade: 1
+    - _MainTexRate: 0.76785713
+    - _RimPower: 20
+    - _RotateSpeed: 0
+    - _Shininess: 0.7
+    - _Spec: 0.9285714
+    - _XSpeed: 0
+    - _YSpeed: 50
+    m_Colors:
+    - _AixSpeed: {r: 0, g: 15, b: 0, a: 0}
+    - _AnimColor: {r: 0.5808823, g: 0.5808823, b: 0.5808823, a: 1}
+    - _AnimSpeed: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 0.7647059, g: 0.42718053, b: 0, a: 1}
+    - _Distance: {r: 1, g: 1, b: 1, a: 1}
+    - _Emission: {r: 0, g: 0, b: 0, a: 0}
+    - _Intensity: {r: 0, g: 0, b: 0, a: 0}
+    - _MainColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RimColor: {r: 1, g: 0.30000004, b: 0, a: 0}
+    - _SpecColor: {r: 1, g: 1, b: 1, a: 1}
+    - _TintColor: {r: 1, g: 0.18382353, b: 0.18382353, a: 0.5019608}
+    - _XYSpeed: {r: 0.3, g: -1, b: 0, a: 0}
+    - _XYSpeedzR: {r: 0, g: -0.5, b: 0, a: 0}
+  m_BuildTextureStacks: []
