@@ -208,6 +208,7 @@ public class PlayerControl : MonoBehaviour {
         SetJumpHeight(3f);
         GameObject b = GameObject.FindWithTag("Boss");
         boss = b == null ? null : b.GetComponent<BossControl>();
+        camt = FindObjectOfType<Camera>().transform;
     }
 
     public void SetJumpHeight(float h) {
