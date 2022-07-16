@@ -11,6 +11,8 @@ public class Road : MonoBehaviour
     public float speed;
     float time;
 
+    public GameObject busStop;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,6 +33,7 @@ public class Road : MonoBehaviour
         }
         else if (IsGameStart)
         {
+            busStop.SetActive(true);
             if(speed > 0)
                 speed -= Time.deltaTime;
         }

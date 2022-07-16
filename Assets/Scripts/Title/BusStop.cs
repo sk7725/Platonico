@@ -10,25 +10,20 @@ public class BusStop : MonoBehaviour
 
     void Start()
     {
-        speed = 0;
+        gameObject.SetActive(false);
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.isKinematic = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        rigidbody.velocity = new Vector3(speed, 0, 0);
+
         if (IsGameStart)
         {
-            rigidbody.isKinematic = false;
-            SetSpeed();
+            gameObject.SetActive(true);
             if (speed > 0)
                 speed -= Time.deltaTime;
         }
-    }
-
-    void SetSpeed()
-    {
-        speed = 10;
     }
 }
