@@ -31,7 +31,7 @@ public class PlayerControl : MonoBehaviour {
     public static float health = 0f;
     private bool jumpReleased = false;
     private float jumpPressTimer = JUMP_GRACE + 0.1f;
-    private float[] cooldowns;
+    public float[] cooldowns;
 
     public GameObject skillIconGrid, skillIconPrefab;
 
@@ -43,8 +43,10 @@ public class PlayerControl : MonoBehaviour {
         reset();
         SetPlatonic(platonics[4]);
 
-        foreach (Skill skill in skills) {
-            BuildSkillIcon(skill);
+        if (boss != null) {
+            for (int i=0; i<skills.Length; i++) {
+                BuildSkillIcon(skills[i], i);
+            }
         }
     }
 
@@ -227,7 +229,9 @@ public class PlayerControl : MonoBehaviour {
         return Mathf.Sqrt(Mathf.Abs(2f * Physics2D.gravity.y * h)) * Mathf.Sign(-Physics2D.gravity.y * h);//v = sqrt(2gh)
     }
 
-    void BuildSkillIcon(Skill skill) {
-        
+    void BuildSkillIcon(Skill skill, int id) {
+        SkillIconDisplay si = Instantiate(skillIconPrefab, Vector3.zero, Quaternion.identity).GetComponent<SkillIconDisplay>();
+        si.Set(this, skill, id);
+        si.transform.SetParent(skillIconGrid.transform, false);
     }
 }

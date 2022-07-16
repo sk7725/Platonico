@@ -6,7 +6,7 @@ using UnityEngine;
 public class Skill : ScriptableObject {
     public KeyCode key;
     public float cooldown = 15f;
-    public Texture2D icon;
+    public Sprite icon;
     public virtual void Use(PlayerControl pcon) {
 
     }
