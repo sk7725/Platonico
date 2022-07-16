@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    public const float SPEED = 0.5f, AIRSPEED = 0.07f, ROLLSPEED = 2f, MAX_HP = 100;
+    public const float SPEED = 0.3f, AIRSPEED = 0.07f, ROLLSPEED = 2f, MAX_HP = 100;
     private const float JUMP_GRACE = 0.3f;
     private const float JUMP_RELEASE_REDUCE = 0.75f;
     public static float JUMP_MAX = 0f;
@@ -35,7 +35,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void Update() {
-        Vector3 vel = rigid.velocity;
+        Vector3 vel = rigid.velocity; 
         bool inputJump = Input.GetKey(KeyCode.Space);
         stateTime += Time.deltaTime;
         CheckLanded();
