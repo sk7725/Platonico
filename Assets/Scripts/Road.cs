@@ -12,6 +12,9 @@ public class Road : MonoBehaviour
     float time;
 
     public GameObject busStop;
+    public SpawnPlayer spawnPlayer;
+
+    bool playerSpawned = false;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +39,12 @@ public class Road : MonoBehaviour
             busStop.SetActive(true);
             if(speed > 0)
                 speed -= Time.deltaTime;
+        }
+
+        if (!playerSpawned && speed < 0.01f)
+        {
+            Instantiate(spawnPlayer.PlayerPrefab, spawnPlayer.SpawnPoint);
+            playerSpawned = true;
         }
     }
 }
