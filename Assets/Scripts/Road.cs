@@ -2,8 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bus : MonoBehaviour
+public class Road : MonoBehaviour
 {
+    public static bool IsGameStart;
+
     Vector3 initPos;
     Rigidbody rigidbody;
     public float speed;
