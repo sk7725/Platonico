@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e14d0436f2d3134f887f1a65432fb28, type: 3}
   m_Name: Cube
   m_EditorClassIdentifier: 
-  moveType: 0
+  moveType: 1
   prefab: {fileID: 3190738980696279189, guid: ee9a0146ae8496845acdec38abb14747, type: 3}
   jumps: 1
+  speedMultiplier: 3

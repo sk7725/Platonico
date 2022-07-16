@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e14d0436f2d3134f887f1a65432fb28, type: 3}
   m_Name: Octa
   m_EditorClassIdentifier: 
-  moveType: 0
+  moveType: 1
   prefab: {fileID: 585367300550214251, guid: 27b3b5455963f51408922811e59597d7, type: 3}
   jumps: 1
+  speedMultiplier: 1
