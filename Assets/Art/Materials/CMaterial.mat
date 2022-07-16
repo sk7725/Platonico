@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RedBloom
+  m_Name: CMaterial
   m_Shader: {fileID: 4800000, guid: 983e110ebaacd88418465a0459449141, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -22,9 +22,10 @@ Material:
     m_TexEnvs: []
     m_Ints: []
     m_Floats:
-    - _Amplitude: 0.5
-    - _Intensity: 1
-    - _Period: 10
+    - _Amplitude: 1.5
+    - _Frequency: 1
+    - _Intensity: 5
+    - _Period: 11.89
     m_Colors:
     - _TintColor: {r: 1, g: 0.37324363, b: 0, a: 1}
   m_BuildTextureStacks: []

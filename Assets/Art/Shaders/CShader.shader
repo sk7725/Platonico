@@ -1,11 +1,11 @@
-Shader "Platonics/RedBloom"
+Shader "Platonics/CShader"
 {
     Properties
     {
         _TintColor("Tint Color", color) = (1, 1, 1, 1)
 	    _Intensity("Intensity", Range(0, 20)) = 0.5
         _Amplitude("Amplitude", Float) = 0
-        _Period("Period", Float) = 1
+        _Frequency("Frequency", Float) = 1
     }  
 
 	SubShader
@@ -35,7 +35,7 @@ Shader "Platonics/RedBloom"
         float4 _TintColor;
         float _Intensity;
         float _Amplitude;
-        float _Period;
+        float _Frequency;
 
         struct VertexInput
         {
@@ -50,7 +50,7 @@ Shader "Platonics/RedBloom"
       	VertexOutput vert(VertexInput v)
         {
             VertexOutput o;      
-            _Amplitude *= (1 + sin(_Time.z * _Period)) * 0.001;
+            _Amplitude *= (1 + sin(_Time.z * _Frequency)) * 0.001;
             o.vertex = TransformObjectToHClip(v.vertex.xyz + normalize(v.vertex.xyz) * _Amplitude);
 
             return o;
