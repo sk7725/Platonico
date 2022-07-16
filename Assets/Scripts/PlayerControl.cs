@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerControl : MonoBehaviour {
-    public const float SPEED = 0.5f, AIRSPEED = 0.07f, MAX_HP = 100;
+    public const float SPEED = 0.5f, AIRSPEED = 0.07f, ROLLSPEED = 2f, MAX_HP = 100;
     private const float JUMP_GRACE = 0.3f;
     private const float JUMP_RELEASE_REDUCE = 0.75f;
     public static float JUMP_MAX = 0f;
@@ -108,21 +108,28 @@ public class PlayerControl : MonoBehaviour {
             platonic.ShiftUp();
         }
 
-        if(platonic.moveType == Platonic.MoveType.SLIDE || platonic.moveType == Platonic.MoveType.HOVER) {
+        if(!landed || platonic.moveType == Platonic.MoveType.SLIDE || platonic.moveType == Platonic.MoveType.HOVER) {
             bool hover = platonic.moveType == Platonic.MoveType.HOVER;
             if (Input.GetKey(KeyCode.UpArrow)) {
                 vel += ForwardVector() * (landed ? SPEED : AIRSPEED);
-                if(hover) rigid.AddTorque(new Vector3(0, 3.5f, 0));
+                if(hover) rigid.AddTorque(new Vector3(0, 2.5f, 0));
             }
             if (Input.GetKey(KeyCode.DownArrow)) {
                 vel += ForwardVector() * (landed ? SPEED : AIRSPEED) * -1;
-                if (hover) rigid.AddTorque(new Vector3(0, -3.5f, 0));
+                if (hover) rigid.AddTorque(new Vector3(0, -2.5f, 0));
             }
             if (Input.GetKey(KeyCode.RightArrow)) {
                 vel += RightVector() * (landed ? SPEED : AIRSPEED);
+                if (hover) rigid.AddTorque(new Vector3(0, 2.5f, 0));
             }
             if (Input.GetKey(KeyCode.LeftArrow)) {
                 vel += RightVector() * (landed ? SPEED : AIRSPEED) * -1;
+                if (hover) rigid.AddTorque(new Vector3(0, -2.5f, 0));
+            }
+        }
+        else {
+            if (Input.GetKey(KeyCode.UpArrow)) {
+                vel += ForwardVector() * (landed ? SPEED : AIRSPEED);
             }
         }
 
