@@ -12,7 +12,7 @@ public class BusStop : MonoBehaviour
     {
         speed = 0;
         rigidbody = GetComponent<Rigidbody>();
-        rigidbody.enabled = false;
+        rigidbody.isKinematic = true;
     }
 
     // Update is called once per frame
@@ -20,7 +20,7 @@ public class BusStop : MonoBehaviour
     {
         if (IsGameStart)
         {
-            rigidbody.enabled = true;
+            rigidbody.isKinematic = false;
             SetSpeed();
             if (speed > 0)
                 speed -= Time.deltaTime;
