@@ -14,10 +14,10 @@ OcclusionCullingSettings:
 RenderSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 9
-  m_Fog: 0
-  m_FogColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  m_Fog: 1
+  m_FogColor: {r: 0.020274075, g: 0.6320754, b: 0.2665337, a: 1}
   m_FogMode: 3
-  m_FogDensity: 0.01
+  m_FogDensity: 0.013
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 0.212, g: 0.227, b: 0.259, a: 1}
@@ -655,6 +655,71 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &392672860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 392672862}
+  - component: {fileID: 392672861}
+  m_Layer: 0
+  m_Name: Reflection Probe
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!215 &392672861
+ReflectionProbe:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392672860}
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Type: 0
+  m_Mode: 1
+  m_RefreshMode: 0
+  m_TimeSlicingMode: 0
+  m_Resolution: 128
+  m_UpdateFrequency: 0
+  m_BoxSize: {x: 500, y: 500, z: 500}
+  m_BoxOffset: {x: 0, y: 0, z: 0}
+  m_NearClip: 0.3
+  m_FarClip: 1000
+  m_ShadowDistance: 100
+  m_ClearFlags: 1
+  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IntensityMultiplier: 1
+  m_BlendDistance: 1
+  m_HDR: 1
+  m_BoxProjection: 0
+  m_RenderDynamicObjects: 0
+  m_UseOcclusionCulling: 1
+  m_Importance: 1
+  m_CustomBakedTexture: {fileID: 0}
+--- !u!4 &392672862
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 392672860}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.2023025, y: 3.6380303, z: 1.4295682}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &423555799
 GameObject:
@@ -1748,7 +1813,7 @@ PrefabInstance:
     - target: {fileID: 1940737538962374942, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 170.54779
+      value: 196.08807
       objectReference: {fileID: 0}
     - target: {fileID: 3377372905712224776, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
@@ -1758,22 +1823,22 @@ PrefabInstance:
     - target: {fileID: 5793634781578276224, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 49.76691
+      value: 39.72399
       objectReference: {fileID: 0}
     - target: {fileID: 5793634781794069660, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 38.956223
+      value: 43.89026
       objectReference: {fileID: 0}
     - target: {fileID: 5793634782054071187, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 33.35025
+      value: 43.72096
       objectReference: {fileID: 0}
     - target: {fileID: 5793634782186529027, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 36.360355
+      value: 39.958046
       objectReference: {fileID: 0}
     - target: {fileID: 6880496813101209453, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
@@ -1793,17 +1858,17 @@ PrefabInstance:
     - target: {fileID: 8523332844261068123, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 47.781185
+      value: 38.88808
       objectReference: {fileID: 0}
     - target: {fileID: 8523332845184385203, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 47.42944
+      value: 34.94491
       objectReference: {fileID: 0}
     - target: {fileID: 8523332845367838759, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
       propertyPath: m_Intensity
-      value: 45.237244
+      value: 41.31769
       objectReference: {fileID: 0}
     - target: {fileID: 8742535082938104414, guid: e7fafe94818bdf24a8d4f5714e19bf79,
         type: 3}
@@ -2439,7 +2504,6 @@ MonoBehaviour:
   - D+
   - D0
   - D-
-  - F
   text: {fileID: 1988662286}
 --- !u!1 &1990706534
 GameObject:

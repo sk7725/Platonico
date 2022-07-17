@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class PlayerHPText : MonoBehaviour
-{
+public class PlayerHPText : MonoBehaviour {
     public string[] hakjum;
     public Text text;
 
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
+    void Update() {
+        if(PlayerControl.health <= 0) {
+            text.text = "학점: F";
+        }
+        else {
+            text.text = "학점: " + hakjum[Mathf.Clamp((int)(hakjum.Length * (1f - PlayerControl.health / PlayerControl.MAX_HP)), 0, hakjum.Length - 1)];
+        }
     }
 }
