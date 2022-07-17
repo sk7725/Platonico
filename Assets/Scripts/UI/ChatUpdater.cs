@@ -20,7 +20,7 @@ public class ChatUpdater : MonoBehaviour {
     void Update() {
         if (!active) return;
 
-        if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.C)) {
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKeyDown(KeyCode.C)) {
             if (outputting) {
                 StopAllCoroutines();
                 outputting = false;
