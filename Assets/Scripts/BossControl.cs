@@ -13,7 +13,7 @@ public class BossControl : MonoBehaviour {
     public GameObject centerWaypoint, bulletHelper;
 
     public GameObject cBullet, laser;
-    private GameObject currentLaser;
+    public GameObject currentLaser;
 
     public PlayerControl pcon;
 

@@ -11,7 +11,8 @@ GameObject:
   - component: {fileID: 7807420228181367455}
   - component: {fileID: 7807420228181367451}
   - component: {fileID: 7807420228181367454}
-  m_Layer: 0
+  - component: {fileID: 8516166382651141475}
+  m_Layer: 10
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: -1412012063857583412, guid: 0000000000000000d000000000000000, type: 0}
@@ -73,6 +74,7 @@ MonoBehaviour:
   platonicCodes: 310000003200000033000000340000003500000036000000
   skills:
   - {fileID: 11400000, guid: c6405f6873c191b4785ab4bf01eb90ec, type: 2}
+  - {fileID: 11400000, guid: 29aa20969b89e47439274faf05fb91a6, type: 2}
   platonic: {fileID: 0}
   landed: 0
   canJump: 0
@@ -82,6 +84,18 @@ MonoBehaviour:
   state: 0
   nextState: 0
   stateTime: 0
+  cooldowns: []
+  skillIconGrid: {fileID: 0}
+  skillIconPrefab: {fileID: 7398795149053288159, guid: fe363dd4338c13d478ab92db076b1c71,
+    type: 3}
+--- !u!81 &8516166382651141475
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807420228181367448}
+  m_Enabled: 1
 --- !u!1001 &7807420229291202105
 PrefabInstance:
   m_ObjectHideFlags: 0
