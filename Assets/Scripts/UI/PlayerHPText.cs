@@ -12,7 +12,7 @@ public class PlayerHPText : MonoBehaviour {
             text.text = "학점: F";
         }
         else {
-            text.text = hakjum[Mathf.Clamp((int)(hakjum.Length * (1f - PlayerControl.health / PlayerControl.MAX_HP)), 0, hakjum.Length - 1)];
+            text.text = "학점: " + hakjum[Mathf.Clamp((int)(hakjum.Length * (1f - PlayerControl.health / PlayerControl.MAX_HP)), 0, hakjum.Length - 1)];
         }
     }
 }
