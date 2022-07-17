@@ -23,8 +23,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 0
+    - _FlowMode: 1
     - _Frequency: 1
-    - _Intensity: 6.8
+    - _Intensity: 4.09
     m_Colors:
     - _TintColor: {r: 1, g: 0.23804897, b: 0.07058823, a: 1}
   m_BuildTextureStacks: []

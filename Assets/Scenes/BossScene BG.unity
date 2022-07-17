@@ -27783,21 +27783,18 @@ Transform:
   - {fileID: 999466359}
   - {fileID: 991029665}
   - {fileID: 530522688}
-  - {fileID: 1895050480}
   - {fileID: 625256701}
   - {fileID: 1949962767}
   - {fileID: 1571177563}
   - {fileID: 231409103}
   - {fileID: 1391492095}
   - {fileID: 7682073}
-  - {fileID: 1263762897}
   - {fileID: 1080291567}
   - {fileID: 1978983533}
   - {fileID: 1713748228}
   - {fileID: 1439419933}
   - {fileID: 98961557}
   - {fileID: 1306247977}
-  - {fileID: 1541210135}
   - {fileID: 2061845264}
   - {fileID: 701245217}
   - {fileID: 856989838}
@@ -27861,6 +27858,7 @@ Transform:
   - {fileID: 1236735724}
   - {fileID: 46936526}
   - {fileID: 1808469685}
+  - {fileID: 1895050480}
   - {fileID: 79005196}
   - {fileID: 752703501}
   - {fileID: 890230761}
@@ -27895,6 +27893,7 @@ Transform:
   - {fileID: 1239163784}
   - {fileID: 244126623}
   - {fileID: 1715484242}
+  - {fileID: 1263762897}
   - {fileID: 204687922}
   - {fileID: 638771801}
   - {fileID: 1711395980}
@@ -27921,6 +27920,7 @@ Transform:
   - {fileID: 1212093937}
   - {fileID: 18502642}
   - {fileID: 600981123}
+  - {fileID: 1541210135}
   - {fileID: 163865408}
   - {fileID: 246999689}
   - {fileID: 879936283}
@@ -36069,7 +36069,7 @@ PrefabInstance:
     - target: {fileID: 7524036272996435617, guid: 06df99dd7790d2a4aa6891d185926af8,
         type: 3}
       propertyPath: m_Intensity
-      value: 44.228104
+      value: 38.886795
       objectReference: {fileID: 0}
     - target: {fileID: 7524036272996435617, guid: 06df99dd7790d2a4aa6891d185926af8,
         type: 3}
@@ -56594,7 +56594,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1230532083}
-  m_LocalRotation: {x: -0.0072117597, y: 0.5982557, z: 0.0053846496, w: 0.80125475}
+  m_LocalRotation: {x: -0.00721176, y: 0.59825563, z: 0.005384649, w: 0.8012548}
   m_LocalPosition: {x: -8.13, y: 0.78, z: -3.78}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -56625,8 +56625,8 @@ MonoBehaviour:
     m_Bits: 1
   m_VolumeTrigger: {fileID: 0}
   m_VolumeFrameworkUpdateModeOption: 2
-  m_RenderPostProcessing: 0
-  m_Antialiasing: 0
+  m_RenderPostProcessing: 1
+  m_Antialiasing: 1
   m_AntialiasingQuality: 2
   m_StopNaN: 0
   m_Dithering: 0
@@ -59013,7 +59013,7 @@ PrefabInstance:
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
       propertyPath: m_Intensity
-      value: 42.61143
+      value: 41.11234
       objectReference: {fileID: 0}
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
@@ -63169,7 +63169,7 @@ PrefabInstance:
     - target: {fileID: 345840053571220440, guid: 5c4b3047396a8ba47bc9656832424cd9,
         type: 3}
       propertyPath: m_Intensity
-      value: 182.71309
+      value: 181.6554
       objectReference: {fileID: 0}
     - target: {fileID: 662953931811583549, guid: 5c4b3047396a8ba47bc9656832424cd9,
         type: 3}
@@ -64206,7 +64206,7 @@ PrefabInstance:
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
       propertyPath: m_Intensity
-      value: 47.833027
+      value: 42.43053
       objectReference: {fileID: 0}
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
@@ -85325,7 +85325,7 @@ PrefabInstance:
     - target: {fileID: 7524036272996435617, guid: 06df99dd7790d2a4aa6891d185926af8,
         type: 3}
       propertyPath: m_Intensity
-      value: 34.707054
+      value: 42.435257
       objectReference: {fileID: 0}
     - target: {fileID: 7524036272996435617, guid: 06df99dd7790d2a4aa6891d185926af8,
         type: 3}
@@ -86986,7 +86986,7 @@ PrefabInstance:
     - target: {fileID: 7524036272996435617, guid: 06df99dd7790d2a4aa6891d185926af8,
         type: 3}
       propertyPath: m_Intensity
-      value: 36.074493
+      value: 46.312347
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06df99dd7790d2a4aa6891d185926af8, type: 3}
@@ -91307,7 +91307,7 @@ PrefabInstance:
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
       propertyPath: m_Intensity
-      value: 36.08742
+      value: 39.699978
       objectReference: {fileID: 0}
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
@@ -96741,7 +96741,7 @@ PrefabInstance:
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}
       propertyPath: m_Intensity
-      value: 44.743317
+      value: 41.292057
       objectReference: {fileID: 0}
     - target: {fileID: 5640029640043552129, guid: 1ebb6b287b61cab40a638d27672af713,
         type: 3}

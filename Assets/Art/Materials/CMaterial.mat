@@ -23,8 +23,9 @@ Material:
     m_Ints: []
     m_Floats:
     - _Amplitude: 1.5
+    - _FlowMode: 0
     - _Frequency: 1
-    - _Intensity: 5
+    - _Intensity: 3
     - _Period: 11.89
     m_Colors:
     - _TintColor: {r: 1, g: 0.37324363, b: 0, a: 1}

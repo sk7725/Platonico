@@ -6,6 +6,7 @@ Shader "Platonics/CShader"
 	    _Intensity("Intensity", Range(0, 20)) = 0.5
         _Amplitude("Amplitude", Float) = 0
         _Frequency("Frequency", Float) = 1
+        _FlowMode("Flow Mode", Float) = 0
     }  
 
 	SubShader
@@ -36,6 +37,7 @@ Shader "Platonics/CShader"
         float _Intensity;
         float _Amplitude;
         float _Frequency;
+        float _FlowMode;
 
         struct VertexInput
         {
@@ -58,7 +60,12 @@ Shader "Platonics/CShader"
 
         half4 frag(VertexOutput i) : SV_Target
         { 
-            float4 color = _TintColor * _Intensity;
+            float4 color;
+            if(_FlowMode == 1)
+                color = _TintColor * (2 * _Intensity + _Intensity * sin(_Frequency * _Time.z));
+            else
+                color = _TintColor * _Intensity;
+            
             return color;  
         }
         ENDHLSL  
