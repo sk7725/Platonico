@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 3bf089522ffe12e41a3b16897e663cdb
+ModelImporter:
+  serializedVersion: 21202
+  internalIDToNameTable:
+  - first:
+      74: -7270825675454068091
+    second: VRaySun001|VRayPhysicalCamera002|Take 001|BaseLayer
+  - first:
+      74: -5303684441241854695
+    second: VRaySun001|VRayPhysicalCamera003|Take 001|BaseLayer
+  - first:
+      74: -6157288200636604641
+    second: VRaySun001|VRayPhysicalCamera004|Take 001|BaseLayer
+  - first:
+      74: -2541829095918800183
+    second: VRaySun001|VRayPhysicalCamera005|Take 001|BaseLayer
+  - first:
+      74: 2260672107198851900
+    second: VRaySun001|VRayPhysicalCamera006|Take 001|BaseLayer
+  - first:
+      74: 2559324712582011712
+    second: VRaySun001|VRayPhysicalCamera007|Take 001|BaseLayer
+  - first:
+      74: 5182124122467180023
+    second: VRaySun001|VRaySun001|Take 001|BaseLayer
+  - first:
+      74: 6415744030551792744
+    second: VRayPhysicalCamera003|VRayPhysicalCamera002|Take 001|BaseLayer
+  - first:
+      74: -2203625227645815924
+    second: VRayPhysicalCamera003|VRayPhysicalCamera003|Take 001|BaseLayer
+  - first:
+      74: 6828507294991636837
+    second: VRayPhysicalCamera003|VRayPhysicalCamera004|Take 001|BaseLayer
+  - first:
+      74: -1533795940402129938
+    second: VRayPhysicalCamera003|VRayPhysicalCamera005|Take 001|BaseLayer
+  - first:
+      74: -4810970221238509355
+    second: VRayPhysicalCamera003|VRayPhysicalCamera006|Take 001|BaseLayer
+  - first:
+      74: -1452795791974025986
+    second: VRayPhysicalCamera003|VRayPhysicalCamera007|Take 001|BaseLayer
+  - first:
+      74: -6211482288515261711
+    second: VRayPhysicalCamera003|VRaySun001|Take 001|BaseLayer
+  - first:
+      74: -1254945442538058349
+    second: VRayPhysicalCamera004|VRayPhysicalCamera002|Take 001|BaseLayer
+  - first:
+      74: -6035681978769077259
+    second: VRayPhysicalCamera004|VRayPhysicalCamera003|Take 001|BaseLayer
+  - first:
+      74: 5277825411382247461
+    second: VRayPhysicalCamera004|VRayPhysicalCamera004|Take 001|BaseLayer
+  - first:
+      74: 8338114221182915864
+    second: VRayPhysicalCamera004|VRayPhysicalCamera005|Take 001|BaseLayer
+  - first:
+      74: -9110987063100653049
+    second: VRayPhysicalCamera004|VRayPhysicalCamera006|Take 001|BaseLayer
+  - first:
+      74: -5149845881935325839
+    second: VRayPhysicalCamera004|VRayPhysicalCamera007|Take 001|BaseLayer
+  - first:
+      74: 7660149644855901401
+    second: VRayPhysicalCamera004|VRaySun001|Take 001|BaseLayer
+  - first:
+      74: 934814865508081451
+    second: VRayPhysicalCamera005|VRayPhysicalCamera002|Take 001|BaseLayer
+  - first:
+      74: -3380851160206671196
+    second: VRayPhysicalCamera005|VRayPhysicalCamera003|Take 001|BaseLayer
+  - first:
+      74: 622354042190330212
+    second: VRayPhysicalCamera005|VRayPhysicalCamera004|Take 001|BaseLayer
+  - first:
+      74: -6729882853063228228
+    second: VRayPhysicalCamera005|VRayPhysicalCamera005|Take 001|BaseLayer
+  - first:
+      74: 6371178001858884579
+    second: VRayPhysicalCamera005|VRayPhysicalCamera006|Take 001|BaseLayer
+  - first:
+      74: -8196477287974544853
+    second: VRayPhysicalCamera005|VRayPhysicalCamera007|Take 001|BaseLayer
+  - first:
+      74: 6263935512651220200
+    second: VRayPhysicalCamera005|VRaySun001|Take 001|BaseLayer
+  - first:
+      74: -4643564670813292349
+    second: VRayPhysicalCamera006|VRayPhysicalCamera002|Take 001|BaseLayer
+  - first:
+      74: 5016012800064725489
+    second: VRayPhysicalCamera006|VRayPhysicalCamera003|Take 001|BaseLayer
+  - first:
+      74: -6126105863658475628
+    second: VRayPhysicalCamera006|VRayPhysicalCamera004|Take 001|BaseLayer
+  - first:
+      74: -9166423613739864838
+    second: VRayPhysicalCamera006|VRayPhysicalCamera005|Take 001|BaseLayer
+  - first:
+      74: -3791191887555556683
+    second: VRayPhysicalCamera006|VRayPhysicalCamera006|Take 001|BaseLayer
+  - first:
+      74: -4242528929910620495
+    second: VRayPhysicalCamera006|VRayPhysicalCamera007|Take 001|BaseLayer
+  - first:
+      74: 3391292477207288221
+    second: VRayPhysicalCamera006|VRaySun001|Take 001|BaseLayer
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 2
+  humanoidOversampling: 1
+  avatarSetup: 0
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
