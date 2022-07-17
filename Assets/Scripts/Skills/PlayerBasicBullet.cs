@@ -20,7 +20,6 @@ public class PlayerBasicBullet : MonoBehaviour {
     }
 
     private void OnCollisionEnter(Collision collision) {
-        Debug.Log(collision);
         if (collision.collider.CompareTag("Boss")) {
             BossControl.health -= damage;
             Debug.Log("B" + BossControl.health);

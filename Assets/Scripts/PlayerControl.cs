@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerControl : MonoBehaviour {
     public const float SPEED = 0.3f, AIRSPEED = 0.07f, ROLLSPEED = 0.2f, MAX_HP = 100;
@@ -30,7 +31,9 @@ public class PlayerControl : MonoBehaviour {
     public static float health = 0f;
     private bool jumpReleased = false;
     private float jumpPressTimer = JUMP_GRACE + 0.1f;
-    private float[] cooldowns;
+    public float[] cooldowns;
+
+    public GameObject skillIconGrid, skillIconPrefab;
 
     void Start() {
         cooldowns = new float[skills.Length];
@@ -39,6 +42,12 @@ public class PlayerControl : MonoBehaviour {
         }
         reset();
         SetPlatonic(platonics[4]);
+
+        if (boss != null) {
+            for (int i=0; i<skills.Length; i++) {
+                BuildSkillIcon(skills[i], i);
+            }
+        }
     }
 
     void Update() {
@@ -218,5 +227,11 @@ public class PlayerControl : MonoBehaviour {
     public float heightToVel(float h) {
         Debug.Log(Physics2D.gravity.ToString());
         return Mathf.Sqrt(Mathf.Abs(2f * Physics2D.gravity.y * h)) * Mathf.Sign(-Physics2D.gravity.y * h);//v = sqrt(2gh)
+    }
+
+    void BuildSkillIcon(Skill skill, int id) {
+        SkillIconDisplay si = Instantiate(skillIconPrefab, Vector3.zero, Quaternion.identity).GetComponent<SkillIconDisplay>();
+        si.Set(this, skill, id);
+        si.transform.SetParent(skillIconGrid.transform, false);
     }
 }
