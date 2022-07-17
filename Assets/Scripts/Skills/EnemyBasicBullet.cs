@@ -8,6 +8,8 @@ public class EnemyBasicBullet : MonoBehaviour {
     private float time = 0f;
 
     public Rigidbody rigid;
+    public AudioClip hitSound;
+    public AudioSource audioSource;
 
     void Start() {
         time = 0f;
@@ -15,15 +17,19 @@ public class EnemyBasicBullet : MonoBehaviour {
 
     void Update() {
         time += Time.deltaTime;
-        rigid.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
+        rigid.MovePosition(transform.position + transform.forward * speed / 60f);
         if (time > lifetime) Hit();
     }
 
     private void OnCollisionEnter(Collision collision) {
         if (collision.collider.CompareTag("Player")) {
-            PlayerControl.health -= damage;
+            PlayerControl.health -= damage * PlayerControl.damageMultiplier;
             Debug.Log("P" + PlayerControl.health);
             Hit();
+            if (hitSound != null) {
+                audioSource.enabled = true;
+                audioSource.PlayOneShot(hitSound);
+            }
         }
         else if (collision.collider.CompareTag("Terrain")) {
             Hit();

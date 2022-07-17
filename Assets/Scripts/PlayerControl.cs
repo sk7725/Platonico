@@ -18,6 +18,8 @@ public class PlayerControl : MonoBehaviour {
     public Rigidbody rigid;
     public Collider col;
     public BossControl boss;
+    public static bool cutscene = false;
+    public static float damageMultiplier = 1f;
 
     public enum State{
         NONE,
@@ -51,12 +53,13 @@ public class PlayerControl : MonoBehaviour {
     }
 
     void Update() {
+        if(health > MAX_HP) health = MAX_HP;
         Vector3 vel = rigid.velocity; 
-        bool inputJump = Input.GetKey(KeyCode.Space);
+        bool inputJump = Input.GetKey(KeyCode.Space) && !cutscene;
         stateTime += Time.deltaTime;
         CheckLanded();
 
-        if (Input.GetKeyDown(KeyCode.Space)) {
+        if (Input.GetKeyDown(KeyCode.Space) && !cutscene) {
             jumpPressTimer = 0f;
         }
         else if (jumpPressTimer < JUMP_GRACE) {
@@ -114,6 +117,7 @@ public class PlayerControl : MonoBehaviour {
     }
 
     private void UpdateInput(ref Vector3 vel) {
+        if (cutscene) return;
         if (Input.GetKey(KeyCode.LeftShift)) {
             platonic.Shift();
         }
@@ -212,6 +216,7 @@ public class PlayerControl : MonoBehaviour {
         nextState = State.IDLE;
         jumpPressTimer = JUMP_GRACE + 0.1f;
         canJump = true;
+        damageMultiplier = 1f;
 
         health = MAX_HP;
         SetJumpHeight(3f);

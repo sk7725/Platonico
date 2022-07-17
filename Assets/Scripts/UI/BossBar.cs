@@ -13,8 +13,6 @@ public class BossBar : MonoBehaviour {
     void Start() {
         SetBar(hpBar, 0);
         SetBar(hpBarSub, 0);
-        //todo remove
-        Init();
     }
 
     void Update() {
@@ -36,7 +34,11 @@ public class BossBar : MonoBehaviour {
     }
 
     public void Init() {
-        FillBar(2f);
+        StartCoroutine(FillBar(2f));
+    }
+
+    public void End() {
+        StartCoroutine(EndBar(1f));
     }
 
     public void SetBar(RectTransform r, float f) {
@@ -49,9 +51,9 @@ public class BossBar : MonoBehaviour {
 
     IEnumerator FillBar(float duration) {
         float time = 0;
-        while (time < duration) {
+        while (time < 1f) {
             time += Time.deltaTime;
-            float f = time / duration;
+            float f = time;
             transform.localScale = Vector3.one * f;
             yield return null;
         }
@@ -67,6 +69,18 @@ public class BossBar : MonoBehaviour {
 
         SetBar(hpBar, 1f);
         SetBar(hpBarSub, 1f);
+        deltaHp = BossControl.health;
         init = true;
     }
-}
+
+    IEnumerator EndBar(float duration) {
+        float time = 0;
+        while (time < duration) {
+            time += Time.deltaTime;
+            float f = time / duration;
+            transform.localScale = Vector3.one * (1 - f);
+            yield return null;
+        }
+        transform.localScale = Vector3.zero;
+    }
+    }

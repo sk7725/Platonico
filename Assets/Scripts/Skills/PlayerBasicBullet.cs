@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlayerBasicBullet : MonoBehaviour {
     public float speed = 3f, lifetime = 3f, damage = 3f;
-    public GameObject hitFx;
+    public GameObject hitFx, despawnFx;
+    public AudioClip hitSound;
+    public AudioSource audioSource;
     private float time = 0f;
 
     public Rigidbody rigid;
@@ -15,8 +17,8 @@ public class PlayerBasicBullet : MonoBehaviour {
 
     void Update() {
         time += Time.deltaTime;
-        rigid.MovePosition(transform.position + transform.forward * speed * Time.deltaTime);
-        if (time > lifetime) Hit();
+        rigid.MovePosition(transform.position + transform.forward * speed / 60f);
+        if (time > lifetime) Despawn();
     }
 
     private void OnCollisionEnter(Collision collision) {
@@ -26,13 +28,24 @@ public class PlayerBasicBullet : MonoBehaviour {
             Hit();
         }
         else if (collision.collider.CompareTag("Terrain")) {
-            Hit();
+            Despawn();
         }
     }
 
     public void Hit() {
-        if(hitFx != null) {
+        if (hitFx != null) {
             Instantiate(hitFx, transform.position, transform.rotation);
+        }
+        if (hitSound != null) {
+            //audioSource.PlayOneShot(hitSound);
+            AudioSource.PlayClipAtPoint(hitSound, GameObject.FindGameObjectWithTag("Player").transform.position);
+        }
+        Destroy(gameObject);
+    }
+
+    public void Despawn() {
+        if (despawnFx != null) {
+            Instantiate(despawnFx, transform.position, transform.rotation);
         }
         Destroy(gameObject);
     }

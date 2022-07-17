@@ -27,5 +27,6 @@ public class SkillIconDisplay : MonoBehaviour {
         this.id = id;
         this.pcon = pcon;
         icon.sprite = cooldown.sprite = skill.icon;
+        key.text = skill.key.ToString();
     }
 }
